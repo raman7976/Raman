@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-night text-white font-sans antialiased;
+    /* faint pixel-dither so the matte surface reads as textured, not flat */
+    background-image: radial-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+
+  ::selection {
+    background: #54cf4e;
+    color: #0a0a0b;
+  }
+
+  /* fixed navbar offset for anchor scrolling */
+  section {
+    scroll-margin-top: 76px;
+  }
+
+  /* thin blocky scrollbar */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a0b;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2d34;
+    border: 3px solid #0a0a0b;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3a8f36;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* The core "matte block": beveled edges (light top/left, dark bottom/right)
+     + a hard offset shadow so it reads as a raised Minecraft cube. */
+  .mc-panel {
+    @apply relative bg-panel border-[3px] border-solid;
+    border-top-color: rgba(255, 255, 255, 0.09);
+    border-left-color: rgba(255, 255, 255, 0.09);
+    border-right-color: rgba(0, 0, 0, 0.55);
+    border-bottom-color: rgba(0, 0, 0, 0.55);
+    box-shadow: 0 6px 0 0 rgba(0, 0, 0, 0.42);
+  }
+
+  /* Sunken inset (inventory slot look) */
+  .mc-slot {
+    @apply relative bg-ink border-[3px] border-solid;
+    border-top-color: rgba(0, 0, 0, 0.6);
+    border-left-color: rgba(0, 0, 0, 0.6);
+    border-right-color: rgba(255, 255, 255, 0.07);
+    border-bottom-color: rgba(255, 255, 255, 0.07);
+  }
+
+  /* Raised hard shadow (works with .mc-press hover collapse) */
+  .mc-raise {
+    box-shadow: 0 6px 0 0 rgba(0, 0, 0, 0.42);
+  }
+
+  /* Press-down interaction for anything clickable/hoverable */
+  .mc-press {
+    @apply transition-all duration-150 ease-out;
+  }
+  .mc-press:hover {
+    transform: translateY(3px);
+    box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.42);
+  }
+  .mc-press:active {
+    transform: translateY(6px);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.42);
+  }
+
+  /* Grass-block accent strip along the top edge */
+  .grass-top::before {
+    content: '';
+    @apply absolute left-0 right-0 top-0 h-[5px] bg-grass;
+  }
+}
+
+@layer utilities {
+  .text-glow-grass {
+    text-shadow: 0 0 14px rgba(84, 207, 78, 0.45);
+  }
+  .drop-hard {
+    filter: drop-shadow(3px 3px 0 rgba(0, 0, 0, 0.6));
+  }
+  .bg-grid {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+/* ---- keyframe animations (guarded by reduced-motion above) ---- */
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-22px) rotate(6deg);
+  }
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.animate-floaty {
+  animation: floaty ease-in-out infinite;
+}
+.blink {
+  animation: blink 1.05s steps(1) infinite;
+}
+.animate-bob {
+  animation: bob 1.6s ease-in-out infinite;
+}
