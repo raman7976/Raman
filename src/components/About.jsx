@@ -4,10 +4,12 @@ import Reveal from './ui/Reveal'
 import TechBadge from './ui/TechBadge'
 
 const stack = [
-  { group: 'Languages', items: ['Python', 'JavaScript', 'Swift', 'C++', 'SQL'] },
-  { group: 'Frontend', items: ['React', 'Vite', 'Tailwind', 'SwiftUI'] },
-  { group: 'Backend', items: ['Node', 'Express', 'Django', 'Flask'] },
-  { group: 'Data & Infra', items: ['PostgreSQL', 'Redis', 'MongoDB', 'Docker', 'nginx'] },
+  { group: 'Core', items: ['Full-Stack Development', 'REST API Design', 'Distributed Systems', 'Database Design', 'Auth & Authorization', 'Automated Testing', 'Technical Docs', 'Low-Level Design'] },
+  { group: 'Languages', items: ['C++', 'Java', 'JavaScript', 'SQL'] },
+  { group: 'Frontend', items: ['React', 'Vite', 'Tailwind CSS'] },
+  { group: 'Backend', items: ['Node.js', 'Express.js', 'RESTful APIs', 'Socket.IO', 'JWT'] },
+  { group: 'Databases', items: ['PostgreSQL', 'MySQL', 'Redis', 'Caching Strategies', 'Schema Design'] },
+  { group: 'Foundations', items: ['Data Structures', 'Algorithms', 'OOP', 'DBMS', 'Operating Systems', 'Computer Networks', 'System Design'] },
   { group: 'ML & AI', items: ['scikit-learn', 'NLP', 'OpenCV', 'Strands', 'Ollama', 'Gemini'] },
 ]
 
@@ -60,17 +62,18 @@ export default function About() {
           <Reveal>
             <div className="mc-panel space-y-4 p-5 sm:p-6">
               <p className="text-sm leading-relaxed text-white/75 sm:text-base">
-                Hi, I’m <span className="font-semibold text-white">Raman</span> — a Software
-                Development Engineer who likes turning hard systems problems into clean, scalable
-                products. My capstone is a horizontally-scalable, real-time event-booking platform
-                that <span className="text-grass">never double-books a seat</span>, and I build
-                across fintech, agentic AI, and full-stack web.
+                Software Developer driven by the challenge of designing resilient architectures
+                capable of managing users at scale. Passionate about translating complex user
+                requirements into seamless, high-performance features, with hands-on experience
+                building and optimizing production-ready web applications from the ground up. Driven
+                by a profound interest in the software engineering lifecycle, I derive genuine
+                satisfaction from transforming complex architectural concepts into scalable systems.
               </p>
               <p className="text-sm leading-relaxed text-white/75 sm:text-base">
-                I’ve shipped iOS apps and fintech features through industry internships, placed{' '}
-                <span className="text-gold">Top 50 at HackRx 6.0</span> and{' '}
-                <span className="text-gold">Top 3000 at Amazon ML Summer School</span>, and I’m just
-                as comfortable with distributed systems as with machine learning.
+                I’ve shipped fintech features through industry internships, placed{' '}
+                <span className="text-gold">Top 3000 at Amazon ML Summer School</span> and{' '}
+                <span className="text-gold">Top 50 at HackRx 6.0</span>, and I’m just as comfortable
+                with distributed systems as with machine learning.
               </p>
             </div>
           </Reveal>
