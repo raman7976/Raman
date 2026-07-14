@@ -37,6 +37,24 @@ export const featuredProject = {
 // The rest of the public work, newest-ish first.
 export const projects = [
   {
+    name: 'Expense Tracker',
+    icon: '💰',
+    accent: 'grass',
+    repo: 'https://github.com/raman7976/expense_tracker',
+    blurb:
+      'A full-stack MERN expense tracker with user accounts, transaction CRUD, and a live dashboard for tracking income and spending. Express REST API, MongoDB models, and a React client.',
+    tech: ['MongoDB', 'Express', 'React', 'Node'],
+  },
+  {
+    name: 'Symptom–Disease Diagnosis',
+    icon: '🩺',
+    accent: 'redstone',
+    repo: 'https://github.com/raman7976/Symptom-Disease-Diagnosis-ML',
+    blurb:
+      'A dynamic multi-class diagnosis model that starts from a few symptoms, asks intelligent follow-up questions, and predicts likely conditions with high confidence using Random Forest and feature-correlation analysis over a large dataset.',
+    tech: ['Python', 'scikit-learn', 'Random Forest', 'Jupyter'],
+  },
+  {
     name: 'IPO Fintech Platform',
     icon: '📈',
     accent: 'gold',
@@ -64,15 +82,6 @@ export const projects = [
     tech: ['Python', 'Flask', 'Strands', 'Ollama'],
   },
   {
-    name: 'Expense Tracker',
-    icon: '💰',
-    accent: 'grass',
-    repo: 'https://github.com/raman7976/expense_tracker',
-    blurb:
-      'A full-stack MERN expense tracker with user accounts, transaction CRUD, and a live dashboard for tracking income and spending. Express REST API, MongoDB models, and a React client.',
-    tech: ['MongoDB', 'Express', 'React', 'Node'],
-  },
-  {
     name: 'Resume Parser & Analytics',
     icon: '📄',
     accent: 'diamond',
@@ -80,15 +89,6 @@ export const projects = [
     blurb:
       'An NLP-powered resume analyser that extracts structured data (name, contacts, skills) from PDFs, scores a resume against a target job’s keywords, and flags keyword stuffing — turning raw resumes into recruiter-ready insights.',
     tech: ['Python', 'NLP', 'Flask', 'PDF'],
-  },
-  {
-    name: 'Symptom–Disease Diagnosis',
-    icon: '🩺',
-    accent: 'redstone',
-    repo: 'https://github.com/raman7976/Symptom-Disease-Diagnosis-ML',
-    blurb:
-      'A dynamic multi-class diagnosis model that starts from a few symptoms, asks intelligent follow-up questions, and predicts likely conditions with high confidence using Random Forest and feature-correlation analysis over a large dataset.',
-    tech: ['Python', 'scikit-learn', 'Random Forest', 'Jupyter'],
   },
   {
     name: 'Moving Object Detection',

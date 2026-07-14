@@ -52,7 +52,7 @@ export default function About() {
             <div className="mt-3 text-center">
               <div className="font-pixel text-[11px] text-white">Raman Singh</div>
               <div className="mt-1.5 font-mc text-[10px] uppercase tracking-wide text-grass">
-                SDE · ML
+                SDE
               </div>
             </div>
           </div>
@@ -72,8 +72,7 @@ export default function About() {
               <p className="text-sm leading-relaxed text-white/75 sm:text-base">
                 I’ve shipped fintech features through industry internships, placed{' '}
                 <span className="text-gold">Top 3000 at Amazon ML Summer School</span> and{' '}
-                <span className="text-gold">Top 50 at HackRx 6.0</span>, and I’m just as comfortable
-                with distributed systems as with machine learning.
+                <span className="text-gold">Top 50 at HackRx 6.0</span>.
               </p>
             </div>
           </Reveal>
