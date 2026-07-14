@@ -12,15 +12,15 @@ export const experience = [
     tech: ['Swift', 'iOS', 'UIKit', 'SwiftUI', 'REST'],
   },
   {
-    role: 'Software Developer',
-    company: 'Blustocks Fintech',
-    period: 'Jun 2025 — Jul 2025',
+    role: 'Backend Developer Intern',
+    company: 'Bluestocks Fintech',
+    period: 'June 2025 — August 2025',
     accent: 'gold',
     points: [
-      'Developed full-stack fintech features on a Django/Python backend with a serialised REST API.',
-      'Worked on IPO/market data pipelines and dynamic, data-driven dashboards.',
-      'Contributed across models, APIs, and templates in a fast-moving product team.',
+      'Constructed 15+ robust backend routes and high-throughput RESTful APIs for a dynamic IPO listing dashboard, improving target data-retrieval latency by 20% while converting UI/UX specifications into production-ready endpoints.',
+      'Incorporated secure authentication and validation middleware layers to systematically serve financial datasets across 40+ active corporate listings, ensuring 98% data parsing accuracy across high-volume legal RHP/DRHP document requests.',
+      'Optimized SQL database queries and configured in-memory data caching for static listing metadata, reducing server-side processing overhead by 15% while maintaining strict data integrity during concurrent client updates.',
     ],
-    tech: ['Python', 'Django', 'DRF', 'PostgreSQL'],
+    tech: ['Node.js', 'Express', 'SQL', 'REST API', 'Caching'],
   },
 ]

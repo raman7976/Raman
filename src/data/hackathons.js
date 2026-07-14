@@ -1,5 +1,13 @@
 export const hackathons = [
   {
+    name: 'HackRx 6.0',
+    role: 'Top 50 Finalist',
+    accent: 'grass',
+    icon: '🏆',
+    blurb:
+      'Secured a Top 50 finish among thousands of participants at HackRx 6.0, tackling complex problem statements and building innovative solutions under time pressure.',
+  },
+  {
     name: 'Walmart Sparkathon 2025',
     role: 'Participant',
     accent: 'gold',

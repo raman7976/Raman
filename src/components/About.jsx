@@ -70,7 +70,7 @@ export default function About() {
                 satisfaction from transforming complex architectural concepts into scalable systems.
               </p>
               <p className="text-sm leading-relaxed text-white/75 sm:text-base">
-                I’ve shipped fintech features through industry internships, placed{' '}
+                I placed{' '}
                 <span className="text-gold">Top 3000 at Amazon ML Summer School</span> and{' '}
                 <span className="text-gold">Top 50 at HackRx 6.0</span>.
               </p>
