@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 // (repo name). To deploy on Vercel/Netlify instead, set base to '/'.
 export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: command === 'build' ? '/portfolio/' : '/',
+  base: command === 'build' ? '/Raman/' : '/',
   server: {
     // honor a PORT assigned by the environment (falls back to Vite's default)
     port: process.env.PORT ? Number(process.env.PORT) : 5173,
